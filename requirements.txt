@@ -12,3 +12,4 @@ sqlparse==0.5.3
 svgwrite==1.4.3
 typing_extensions==4.12.2
 tzdata==2024.2
+gunicorn==23.0.0
