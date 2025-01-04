@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-n+_*bpw&m+^1*f5_1(74z0_ysbb82j8%^&vvdyye4=l#v8fx%$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DJANGO_DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = [ 'localhost','127.0.0.1', 'webhealth-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS= ['https://webhealth-production.up.railway.app']
 
 
 # Application definition
