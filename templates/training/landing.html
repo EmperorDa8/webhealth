@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis">Frontline Health Worker Training</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+            Interactive scenario-based microlearning courses designed to enhance frontline health workers' skills
+            and decision-making abilities in real-world situations.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            {% if user.is_authenticated %}
+                <a href="{% url 'dashboard' %}" class="btn btn-primary btn-lg px-4 gap-3">Go to Dashboard</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn btn-primary btn-lg px-4 gap-3">Get Started</a>
+                <a href="{% url 'register' %}" class="btn btn-outline-secondary btn-lg px-4">Register</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 py-5">
+    <div class="col-md-3">
+        <div class="card h-100 module-card">
+            <div class="card-body">
+                <h5 class="card-title">Patient Assessment</h5>
+                <p class="card-text">Learn how to assess patients with diabetes symptoms and document findings.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100 module-card">
+            <div class="card-body">
+                <h5 class="card-title">Medication Administration</h5>
+                <p class="card-text">Master safe medication administration and allergy awareness.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100 module-card">
+            <div class="card-body">
+                <h5 class="card-title">Wound Care</h5>
+                <p class="card-text">Learn effective wound assessment and management techniques.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100 module-card">
+            <div class="card-body">
+                <h5 class="card-title">Emergency Response</h5>
+                <p class="card-text">Master cardiac arrest response and CPR techniques.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
